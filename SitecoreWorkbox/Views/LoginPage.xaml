@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:SitecoreWorkbox;assembly=SitecoreWorkbox"
+	x:Class="SitecoreWorkbox.Views.LoginPage">
+	<ContentPage.Content>
+		<ContentView Padding="25,30,25,0">
+			<StackLayout>
+				<Image Source="sitecorelogo.png" WidthRequest="200"></Image>
+				<Entry Placeholder="Sitecore Address" Text="{Binding InstanceUrl}" />
+				<Entry Placeholder="Username (e.g., sitecore\admin)" Text="{Binding Username}"/>
+				<Entry Placeholder="Password" IsPassword="true" Text="{Binding Password}"/>
+				<Button Text="Login" Command="{Binding LoginCommand}"/>
+			</StackLayout>
+		</ContentView>
+	</ContentPage.Content>
+</ContentPage>
+

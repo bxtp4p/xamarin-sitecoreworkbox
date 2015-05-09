@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SitecoreWorkbox.Views.WorkflowItemsPage" 
+	xmlns:localui="clr-namespace:SitecoreWorkbox.UI;assembly=SitecoreWorkbox"
+	Title="{Binding Workflow.DisplayName}">
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView x:Name="itemsListView"
+				ItemsSource="{Binding WorkflowStateGroups}" 
+		        IsPullToRefreshEnabled="True"
+		        RefreshCommand="{Binding RefreshCommand}"
+		        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+				IsGroupingEnabled="true" 
+				GroupDisplayBinding="{Binding DisplayName}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<localui:AccessoryTextCell
+							Text="{Binding DisplayName}" 
+							Detail="{Binding Path}" 
+							AccessoryType="{x:Static localui:AccessoryType.Detail}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

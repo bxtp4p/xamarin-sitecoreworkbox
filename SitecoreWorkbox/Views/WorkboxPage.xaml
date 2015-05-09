@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SitecoreWorkbox.Views.WorkboxPage"
+	xmlns:localui="clr-namespace:SitecoreWorkbox.UI;assembly=SitecoreWorkbox"
+	Title="Workflows">
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView ItemsSource="{Binding Workflows}" 
+					SelectedItem="{Binding SelectedWorkflow}"
+			        IsPullToRefreshEnabled="True"
+			        RefreshCommand="{Binding RefreshCommand}"
+			        IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+		        <ListView.ItemTemplate>
+			        <DataTemplate>
+						<localui:AccessoryImageCell
+							Text="{Binding DisplayName}" 
+							ImageSource="{Binding IconSource}"
+							AccessoryType="{x:Static localui:AccessoryType.Disclosure}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
