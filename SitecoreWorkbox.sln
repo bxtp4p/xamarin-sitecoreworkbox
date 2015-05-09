@@ -9,6 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreWorkbox.Droid", "Dr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreWorkbox.UITests", "UITests\SitecoreWorkbox.UITests.csproj", "{A06D0FD0-DC86-4D99-8863-0337B33B7302}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{267BBF82-AC1D-43F1-958A-94C1E45FA4DE}"
+	ProjectSection(SolutionItems) = preProject
+		screenshots\login_android.tiff = screenshots\login_android.tiff
+		screenshots\workflow_android.tiff = screenshots\workflow_android.tiff
+		screenshots\Workflow_iOS.tiff = screenshots\Workflow_iOS.tiff
+		screenshots\workflows_android.tiff = screenshots\workflows_android.tiff
+		screenshots\Workflows_iOS.tiff = screenshots\Workflows_iOS.tiff
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,5 +74,7 @@ Global
 		{D0145656-6961-418A-BA60-BE2CB4E5599F}.Release|iPhone.Build.0 = Release|Any CPU
 		{D0145656-6961-418A-BA60-BE2CB4E5599F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{D0145656-6961-418A-BA60-BE2CB4E5599F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
